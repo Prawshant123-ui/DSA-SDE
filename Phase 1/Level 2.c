@@ -51,3 +51,25 @@ int main() {
     return 0;
 }
 
+// 3. Take marks (0–100) and print the corresponding grade (A/B/C/D/F). 
+
+#include <stdio.h>
+
+int main() {
+    float marks;
+    printf("Enter your marks");
+    scanf("%f",&marks);
+
+    if(marks>=80 && marks>=100){
+        printf("A");
+    }else if(marks>=60 && marks>=80){
+        printf("B");
+    }else if(marks>=40 && marks>=60){
+        printf("C");
+    }else if(marks>=20 && marks>=40){
+        printf("D");
+    }else{
+        printf("F");
+    }
+    return 0;
+}
