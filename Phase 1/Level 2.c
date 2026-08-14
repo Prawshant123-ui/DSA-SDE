@@ -73,3 +73,25 @@ int main() {
     }
     return 0;
 }
+
+// Check if one of two given numbers is a multiple of the other.
+
+#include <stdio.h>
+
+int main() {
+    int a,b;
+    printf("Enter your a and b");
+    scanf("%d %d",&a,&b);
+
+    if(a==0 || b==0){
+        printf("Cannot check multiples with zeros");
+    }else if(a%b==0 && b%a==0){
+        printf("One number is multiple of another");
+    }else{
+        printf("Neither number is multiple of one another");
+    }
+    return 0;
+}
+
+// Take the hour of the day (0–23) and print "Good Morning", "Good Afternoon", "Good Evening", or "Good Night". 
+
