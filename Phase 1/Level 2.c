@@ -1,6 +1,6 @@
-// Level-2 (Nested If & Multiple Conditions )
+// // Level-2 (Nested If & Multiple Conditions )
 
-// 1) Take three sides and check if they form a valid triangle. 
+// // 1) Take three sides and check if they form a valid triangle. 
  
 #include <stdio.h>
 
@@ -18,7 +18,8 @@ int main() {
     return 0;
 }
 
-// 2. If the sides form a valid triangle, determine whether it is equilateral, isosceles, or scalene
+// // 2. If the sides form a valid triangle, determine whether it is equilateral, isosceles, or scalene
+
 #include <stdio.h>
 
 int main() {
@@ -51,7 +52,7 @@ int main() {
     return 0;
 }
 
-// 3. Take marks (0–100) and print the corresponding grade (A/B/C/D/F). 
+// // 3. Take marks (0–100) and print the corresponding grade (A/B/C/D/F). 
 
 #include <stdio.h>
 
@@ -74,7 +75,7 @@ int main() {
     return 0;
 }
 
-// Check if one of two given numbers is a multiple of the other.
+// // Check if one of two given numbers is a multiple of the other.
 
 #include <stdio.h>
 
@@ -95,3 +96,27 @@ int main() {
 
 // Take the hour of the day (0–23) and print "Good Morning", "Good Afternoon", "Good Evening", or "Good Night". 
 
+
+#include <stdio.h>
+
+int main() {
+    int hour;
+
+    printf("Enter hour (0-23): ");
+    scanf("%d", &hour);
+
+    if (hour >= 5 && hour < 12) {
+        printf("Good Morning");
+    } 
+    else if (hour >= 12 && hour < 17) {
+        printf("Good Afternoon");
+    } 
+    else if (hour >= 17 && hour < 21) {
+        printf("Good Evening");
+    } 
+    else {
+        printf("Good Night");
+    }
+
+    return 0;
+}
