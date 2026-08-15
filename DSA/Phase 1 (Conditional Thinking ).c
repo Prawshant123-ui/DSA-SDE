@@ -443,9 +443,6 @@ int main() {
 }
 
 
-// Take three numbers and print the median value (neither maximum nor minimum). 
-
-
 
 
 
