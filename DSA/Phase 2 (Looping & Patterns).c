@@ -7,12 +7,28 @@
 
 // 1. Print numbers from 1 to 10.
 
+// #include <stdio.h>
+
+// int main() {
+//     for (int i = 1; i <= 10; i++) {
+//         printf("%d ", i);
+//     }
+    
+//     return 0;
+// }
+
+// 2. Print all even numbers between 1 and 100.
+
 #include <stdio.h>
 
 int main() {
-    for (int i = 1; i <= 10; i++) {
-        printf("%d ", i);
+    for (int i = 1; i <= 100; i++) {
+        if (i % 2 == 0) {
+            printf("%d ", i);
+        }
     }
-    
+
     return 0;
 }
+
+// 
