@@ -48,7 +48,7 @@
 #include <stdio.h>
 
 int main() {
-    int num=1234;
+    int num=1231;
 
     int first=(num/1000)%10;
     int last=num%10;
