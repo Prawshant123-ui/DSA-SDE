@@ -217,70 +217,6 @@ int main() {
    return 0;
 }
 
-// Take a 3-digit number and check if all digits are distinct.
-
-// #include <stdio.h>
-
-// int main()
-// {
-//     int num = 122;
-//     int a = (num / 100) % 10;
-//     int b = (num / 10) % 10;
-//     int c = num % 10;
-
-//     if (a != b && b != c && c != a)
-//     {
-//         printf("All the digits are distinct");
-//     }
-//     else
-//     {
-//         printf("All the digits are not distinct");
-//     }
-//     return 0;
-// }
-
-// Take a 3-digit number and determine if the middle digit is the largest, smallest, or neither.
-
-// #include <stdio.h>
-
-// int main()
-// {
-//     int num = 153;
-//     int a = (num / 100) % 10;
-//     int b = (num / 10) % 10;
-//     int c = num % 10;
-
-//     if(b>a && b> c){
-//         printf("Largest");
-//     }else if(b<a && c<a){
-//         printf("Smallest");
-//        }else{
-//         printf("Neither");
-//        }
-
-//     return 0;
-// }
-
-
-// Take a 4-digit number and check if the first and last digits are equal
-
-#include <stdio.h>
-
-int main() {
-    int num=1231;
-
-    int first=(num/1000)%10;
-    int last=num%10;
-
-    if(first==last){
-        printf("Yes the first and last digits are equal");
-    }else{
-        printf("No the first and last digits are not equal");
-    }
-    return 0;
-}
-
-
 // // // Level-2 (Nested If & Multiple Conditions )
 
 // // 1) Take three sides and check if they form a valid triangle. 
@@ -420,4 +356,96 @@ int main() {
     }
     return 0;
 }
+
+
+// Level 3: Math and Number Logic
+
+// Take a 3-digit number and check if all digits are distinct.
+
+#include <stdio.h>
+
+int main()
+{
+    int num = 122;
+    int a = (num / 100) % 10;
+    int b = (num / 10) % 10;
+    int c = num % 10;
+
+    if (a != b && b != c && c != a)
+    {
+        printf("All the digits are distinct");
+    }
+    else
+    {
+        printf("All the digits are not distinct");
+    }
+    return 0;
+}
+
+// Take a 3-digit number and determine if the middle digit is the largest, smallest, or neither.
+
+#include <stdio.h>
+
+int main()
+{
+    int num = 153;
+    int a = (num / 100) % 10;
+    int b = (num / 10) % 10;
+    int c = num % 10;
+
+    if(b>a && b> c){
+        printf("Largest");
+    }else if(b<a && c<a){
+        printf("Smallest");
+       }else{
+        printf("Neither");
+       }
+
+    return 0;
+}
+
+
+// Take a 4-digit number and check if the first and last digits are equal
+
+#include <stdio.h>
+
+int main() {
+    int num=1231;
+
+    int first=(num/1000)%10;
+    int last=num%10;
+
+    if(first==last){
+        printf("Yes the first and last digits are equal");
+    }else{
+        printf("No the first and last digits are not equal");
+    }
+    return 0;
+}
+
+//Level 4: Logical Operators & Compound Statements 
+
+// Take a number and print "Fizz" if divisible by 3, "Buzz" if divisible by 5, and "FizzBuzz" if divisible by both. 
+
+#include <stdio.h>
+
+int main() {
+   int num=3;
+
+   if(num%3==0){
+      printf("Fizz");
+   }else if(num%5==0){
+      printf("buzz");
+   }else if (num%3==0 && num%5==0){
+      printf("Fizzbuzz");
+   }
+   return 0;
+}
+
+
+// Take three numbers and print the median value (neither maximum nor minimum). 
+
+
+
+
 
