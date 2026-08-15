@@ -120,3 +120,21 @@ int main() {
 
     return 0;
 }
+
+// Check voting eligibility for a given age (18+)
+
+#include <stdio.h>
+
+int main() {
+    int age;
+    printf('Enter your age');
+    scanf("%d",&age);
+
+    if(age>=18){
+        printf("Yes you can vote");
+    }else{
+        printf("No you cant vote");
+    }
+    return 0;
+}
+
