@@ -37,39 +37,99 @@
 
 #include <stdio.h>
 
-int main() {
-    int var=30;
-    int *ptr=&var;
+// int main() {
+//     int var=30;
+//     int *ptr=&var;
 
-    printf("Before:%d",var);
+//     printf("Before:%d",var);
 
-    *ptr=20;
+//     *ptr=20;
 
-    printf("After:%d",var);
-    return 0;
-}
+//     printf("After:%d",var);
+//     return 0;
+// }
 
 // Take two integers and swap them using a function with pointer parameters (call by reference)
 
-#include <stdio.h>
+// #include <stdio.h>
 
-void swap(int *a, int *b) {
-    int temp;
+// void swap(int *a, int *b) {
+//     int temp;
 
-    temp = *a;
-    *a = *b;
-    *b = temp;
-}
+//     temp = *a;
+//     *a = *b;
+//     *b = temp;
+// }
 
-int main() {
-    int a = 10;
-    int b = 20;
+// int main() {
+//     int a = 10;
+//     int b = 20;
 
-    printf("Before swap: a = %d, b = %d\n", a, b);
+//     printf("Before swap: a = %d, b = %d\n", a, b);
 
-    swap(&a, &b);
+//     swap(&a, &b);
 
-    printf("After swap: a = %d, b = %d\n", a, b);
+//     printf("After swap: a = %d, b = %d\n", a, b);
 
-    return 0;
-}
+//     return 0;
+// }
+
+
+// Declare a pointer to a pointer (int **pp) and access the original value through two levels of dereference. 
+
+// #include <stdio.h>
+
+// int main() {
+//     int a = 10;
+
+//     int *ptr = &a;
+//     int **pp = &ptr;
+
+//     int value = **pp;
+
+//     printf("a = %d\n", a);
+//     printf("Value through ptr = %d\n", *ptr);
+//     printf("Value through pp = %d\n", **pp);
+
+//     return 0;
+// }
+
+
+//  Declare an array and a pointer to its first element; print elements using pointer arithmetic (*(ptr+i)) instead of arr[i]
+
+// #include <stdio.h>
+
+// int main() {
+//     int arr[]={1,2,3};
+//     int* ptr=arr;
+
+//     int first=*ptr;
+//     int second=*(ptr+1);
+//     int third=*(ptr+2);
+
+
+//     printf("First element of an array=%d\n",first);
+//     printf("Second element of an array=%d\n",second);
+//     printf("Third element of an array=%d\n",third);
+
+
+//     return 0;
+// }
+
+// Traverse an array using only a pointer and pointer increment (ptr++) in a loop.
+
+// #include <stdio.h>
+
+// int main() {
+//     int arr[3] = {1, 2, 3};
+//     int *ptr = arr;
+//     int size = 3;
+
+//     int *end = arr + size;
+
+//     for (; ptr < end; ptr++) {
+//         printf("%d ", *ptr);
+//     }
+
+//     return 0;
+// }
