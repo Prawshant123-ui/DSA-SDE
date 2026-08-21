@@ -133,3 +133,32 @@
 
 //     return 0;
 // }
+
+
+//  Write a function that accepts an array as a pointer parameter (int *arr) and computes the average. 
+
+#include <stdio.h>
+
+float func(int *arr, int size) {
+    int sum = 0;
+    int *end = arr + size;
+
+    while (arr < end) {
+        sum += *arr;
+        arr++;
+    }
+
+    return (float)sum / size;
+}
+
+int main() {
+    int arr[] = {10, 20, 30, 40, 50};
+    int size = 5;
+
+    float average = func(arr, size);
+
+    printf("Average = %.2f\n", average);
+
+    return 0;
+}
+
