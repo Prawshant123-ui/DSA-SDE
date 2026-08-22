@@ -40,40 +40,60 @@
 
 // Create an array of 5 struct Student and fill it using a loop; print all records.
 
+// #include <stdio.h>
+
+// typedef struct
+// {
+//     char name[25];
+//     int roll_number;
+//     int marks;
+// } Student;
+
+// int main()
+// {
+//     Student students[5];
+
+//     for (int i = 0; i < 5; i++)
+//     {
+//         printf("Enter name: ");
+//         scanf("%24s", students[i].name);
+
+//         printf("Enter roll number: ");
+//         scanf("%d", &students[i].roll_number);
+
+//         printf("Enter marks: ");
+//         scanf("%d", &students[i].marks);
+//     }
+
+//     printf("\n--- Student Records ---\n");
+
+//     for (int i = 0; i < 5; i++)
+//     {
+//         printf("Name: %s\n", students[i].name);
+//         printf("Roll Number: %d\n", students[i].roll_number);
+//         printf("Marks: %d\n\n", students[i].marks);
+//     }
+
+//     return 0;
+// }
+
+//  Declare a pointer to a struct Student and access its members using the arrow operator (->). 
+
 #include <stdio.h>
 
-typedef struct
-{
-    char name[25];
-    int roll_number;
+typedef struct{
+    int id;
+    char name[20];
     int marks;
 } Student;
 
-int main()
-{
-    Student students[5];
-
-    for (int i = 0; i < 5; i++)
-    {
-        printf("Enter name: ");
-        scanf("%24s", students[i].name);
-
-        printf("Enter roll number: ");
-        scanf("%d", &students[i].roll_number);
-
-        printf("Enter marks: ");
-        scanf("%d", &students[i].marks);
-    }
-
-    printf("\n--- Student Records ---\n");
-
-    for (int i = 0; i < 5; i++)
-    {
-        printf("Name: %s\n", students[i].name);
-        printf("Roll Number: %d\n", students[i].roll_number);
-        printf("Marks: %d\n\n", students[i].marks);
-    }
-
+int main() {
+    Student s={1,"Prashant",98};
+    Student *ptr=&s;
+    
+    printf("Id:%d\n", ptr->id);
+    printf("Name:%s\n", ptr->name);
+    printf("Marks:%d\n", ptr->marks);
+    
     return 0;
 }
-
