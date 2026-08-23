@@ -39,28 +39,41 @@
 
 // Average of array elements
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main()
-{
-    int arr[5] = {1, 2, 3, 4, 5};
-    int size = 5;
-    int sum = 0;
-    int avg;
+// int main()
+// {
+//     int arr[5] = {1, 2, 3, 4, 5};
+//     int size = 5;
+//     int sum = 0;
+//     int avg;
 
-    for (int i = 0; i < size; i++)
-    {
-        printf("%d ", arr[i]);
+//     for (int i = 0; i < size; i++)
+//     {
+//         printf("%d ", arr[i]);
 
-        sum = sum + arr[i];
-    }
+//         sum = sum + arr[i];
+//     }
 
-    avg = sum / size;
+//     avg = sum / size;
 
-    printf("\nSum: %d\n", sum);
-    printf("Avg: %d\n", avg);
+//     printf("\nSum: %d\n", sum);
+//     printf("Avg: %d\n", avg);
 
-    return 0;
-}
+//     return 0;
+// }
 
 // 
+
+#include <stdio.h>
+
+int main() {
+    int arr[50]={1,2,3,4,5};
+    int size=5;
+
+    printf("Array:");
+    for(int i=0;i<size;i++){
+        printf("%d ",arr[i]);
+    }
+    return 0;
+}

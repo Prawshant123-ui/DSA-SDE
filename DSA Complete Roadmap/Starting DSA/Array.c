@@ -20,7 +20,77 @@
 //     return 0;
 // }
 
-//Insertion of an element in any index of an array
+// Insertion of an element in any index of an array
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     int arr[50] = {1, 2, 3, 4, 5};
+//     int size = 5;
+
+//     int val = 0;
+//     int idx = 3;
+
+//     for (int i = size; i > idx; i--)
+//     {
+//         arr[i]=arr[i-1];
+//     }
+//     arr[idx] = val;
+//     size++;
+
+//     for (int i = 0; i < size; i++)
+//     {
+//         printf("%d ", arr[i]);
+//     }
+//     return 0;
+// }
+
+
+//  Insertion of an element at beginning  of an array
+
+// #include <stdio.h>
+
+// int main() {
+//     int arr[50]={1,2,3,4,5};
+//     int size=5;
+//     int val=0;
+//      for (int i=size;i>0;i--){
+//         arr[i]=arr[i-1];
+//      }
+//      arr[0]=val;
+//      size++;
+
+//      printf("The new array is:");
+//      for(int i=0;i<size;i++){
+//         printf("%d ",arr[i]);
+//      }
+//     return 0;
+// }
+
+
+// Insertion of an element at end  of an array
+
+#include <stdio.h>
+
+int main() {
+     int arr[50]={1,2,3,4,5};
+    int size=5;
+    int val=6;
+
+    arr[size]=val;
+    size++;
+
+     printf("The new array is:");
+     for(int i=0;i<size;i++){
+        printf("%d ",arr[i]);
+     }
+    return 0;
+}
+
+
+
+
 
 
 // Find maximum and minimum element
