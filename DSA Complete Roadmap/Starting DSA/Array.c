@@ -149,15 +149,62 @@
 // Searching in an array
 // Linear search
 
+// #include <stdio.h>
+
+// int LinearSearch(int arr[], int size, int key)
+// {
+//     for (int i = 0; i < size; i++)
+//     {
+//         if (arr[i] == key)
+//         {
+//             return i;
+//         }
+//     }
+//     return -1;
+// }
+
+// int main()
+// {
+//     int arr[] = {10, 23, 44, 55};
+//     int size = sizeof(arr) / sizeof(arr[0]);
+//     int key = 44;
+
+//     int result = LinearSearch(arr, size, key);
+//     if (result == -1)
+//     {
+//         printf("Element not found");
+//     }
+//     else
+//     {
+//         printf("Element %d found at index %d ", key, result);
+//     }
+
+//     return 0;
+// }
+
+// Binary Search
+
 #include <stdio.h>
 
-int LinearSearch(int arr[], int size, int key)
+int BinarySearch(int arr[], int size, int key)
 {
-    for (int i = 0; i < size; i++)
+    int start = 0;
+    int end = size - 1;
+
+    while (start <= end)
     {
-        if (arr[i] == key)
+        int mid = (start + end) / 2;
+        if (key > arr[mid])
         {
-            return i;
+            start = mid + 1;
+        }
+        else if (key < arr[mid])
+        {
+            end = mid - 1;
+        }
+        else
+        {
+            return mid;
         }
     }
     return -1;
@@ -165,22 +212,24 @@ int LinearSearch(int arr[], int size, int key)
 
 int main()
 {
-    int arr[] = {10, 23, 44, 55};
+    int arr[] = {0, 1, 2, 3, 4, 5};
     int size = sizeof(arr) / sizeof(arr[0]);
-    int key = 44;
 
-    int result = LinearSearch(arr, size, key);
+    int key = 3;
+
+    int result = BinarySearch(arr, size, key);
     if (result == -1)
     {
         printf("Element not found");
     }
     else
     {
-        printf("Element %d found at index %d ", key, result);
+        printf("Element %d found at index %d", key, result);
     }
 
     return 0;
 }
+
 
 // Find maximum and minimum element
 
