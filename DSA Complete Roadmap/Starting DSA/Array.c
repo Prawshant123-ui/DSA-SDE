@@ -112,42 +112,42 @@
 
 // Deletion of an element from the beginning of an array
 
-// #include <stdio.h>
-
-// int main() {
-//     int arr[50]={1,2,3,4,5};
-//     int size=5;
-
-//     for(int i=0;i<size-1;i++){
-//         arr[i]=arr[i+1];
-//     }
-//     size--;
-
-//     printf("The final array is :");
-//     for(int i=0;i<size;i++){
-//         printf("%d ",arr[i]);
-//     }
-
-//     return 0;
-// }
-
-// Deletion of an element from the end of an array
-
 #include <stdio.h>
 
 int main() {
-    int arr[50] = {1, 2, 3, 4, 5};
-    int size = 5;
+    int arr[50]={1,2,3,4,5};
+    int size=5;
 
+    for(int i=0;i<size-1;i++){
+        arr[i]=arr[i+1];
+    }
     size--;
 
-    printf("The final array is: ");
-    for(int i = 0; i < size; i++) {
-        printf("%d ", arr[i]);
+    printf("The final array is :");
+    for(int i=0;i<size;i++){
+        printf("%d ",arr[i]);
     }
 
     return 0;
 }
+
+// Deletion of an element from the end of an array
+
+// #include <stdio.h>
+
+// int main() {
+//     int arr[50] = {1, 2, 3, 4, 5};
+//     int size = 5;
+
+//     size--;
+
+//     printf("The final array is: ");
+//     for(int i = 0; i < size; i++) {
+//         printf("%d ", arr[i]);
+//     }
+
+//     return 0;
+// }
 
 
 // Find maximum and minimum element
