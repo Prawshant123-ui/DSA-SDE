@@ -46,7 +46,6 @@
 //     return 0;
 // }
 
-
 //  Insertion of an element at beginning  of an array
 
 // #include <stdio.h>
@@ -68,7 +67,6 @@
 //     return 0;
 // }
 
-
 // Insertion of an element at end  of an array
 
 // #include <stdio.h>
@@ -87,7 +85,6 @@
 //      }
 //     return 0;
 // }
-
 
 // Deletion of an element from any index in an array
 
@@ -112,24 +109,24 @@
 
 // Deletion of an element from the beginning of an array
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main() {
-    int arr[50]={1,2,3,4,5};
-    int size=5;
+// int main() {
+//     int arr[50]={1,2,3,4,5};
+//     int size=5;
 
-    for(int i=0;i<size-1;i++){
-        arr[i]=arr[i+1];
-    }
-    size--;
+//     for(int i=0;i<size-1;i++){
+//         arr[i]=arr[i+1];
+//     }
+//     size--;
 
-    printf("The final array is :");
-    for(int i=0;i<size;i++){
-        printf("%d ",arr[i]);
-    }
+//     printf("The final array is :");
+//     for(int i=0;i<size;i++){
+//         printf("%d ",arr[i]);
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
 
 // Deletion of an element from the end of an array
 
@@ -149,6 +146,41 @@ int main() {
 //     return 0;
 // }
 
+// Searching in an array
+// Linear search
+
+#include <stdio.h>
+
+int LinearSearch(int arr[], int size, int key)
+{
+    for (int i = 0; i < size; i++)
+    {
+        if (arr[i] == key)
+        {
+            return i;
+        }
+    }
+    return -1;
+}
+
+int main()
+{
+    int arr[] = {10, 23, 44, 55};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int key = 44;
+
+    int result = LinearSearch(arr, size, key);
+    if (result == -1)
+    {
+        printf("Element not found");
+    }
+    else
+    {
+        printf("Element %d found at index %d ", key, result);
+    }
+
+    return 0;
+}
 
 // Find maximum and minimum element
 
