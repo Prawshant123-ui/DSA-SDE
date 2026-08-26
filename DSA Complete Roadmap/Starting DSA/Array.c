@@ -184,51 +184,100 @@
 
 // Binary Search
 
+// #include <stdio.h>
+
+// int BinarySearch(int arr[], int size, int key)
+// {
+//     int start = 0;
+//     int end = size - 1;
+
+//     while (start <= end)
+//     {
+//         int mid = start + (end - start) / 2;
+//         if (key > arr[mid])
+//         {
+//             start = mid + 1;
+//         }
+//         else if (key < arr[mid])
+//         {
+//             end = mid - 1;
+//         }
+//         else
+//         {
+//             return mid;
+//         }
+//     }
+//     return -1;
+// }
+
+// int main()
+// {
+//     int arr[] = {0, 1, 2, 3, 4, 5};
+//     int size = sizeof(arr) / sizeof(arr[0]);
+
+//     int key = 3;
+
+//     int result = BinarySearch(arr, size, key);
+//     if (result == -1)
+//     {
+//         printf("Element not found");
+//     }
+//     else
+//     {
+//         printf("Element %d found at index %d", key, result);
+//     }
+
+//     return 0;
+// }
+
+
+// Updating an element in an array
+
 #include <stdio.h>
 
-int BinarySearch(int arr[], int size, int key)
+int update(int arr[], int size, int value, int idx)
 {
-    int start = 0;
-    int end = size - 1;
-
-    while (start <= end)
+    if (idx >= 0 && idx < size)
     {
-        int mid = (start + end) / 2;
-        if (key > arr[mid])
-        {
-            start = mid + 1;
-        }
-        else if (key < arr[mid])
-        {
-            end = mid - 1;
-        }
-        else
-        {
-            return mid;
-        }
+        arr[idx] = value;
+        return idx;
     }
-    return -1;
+    else
+    {
+        printf("Invalid index\n");
+        return -1;
+    }
 }
 
 int main()
 {
-    int arr[] = {0, 1, 2, 3, 4, 5};
+    int arr[] = {1, 2, 3, 4, 5};
     int size = sizeof(arr) / sizeof(arr[0]);
 
-    int key = 3;
+    int value = 9;
+    int idx = 1;
 
-    int result = BinarySearch(arr, size, key);
+    int result = update(arr, size, value, idx);
+
     if (result == -1)
     {
-        printf("Element not found");
+        printf("Element not updated\n");
     }
     else
     {
-        printf("Element %d found at index %d", key, result);
+        printf("Element is updated as %d at index %d\n", value, result);
+
+        printf("Updated Array: ");
+
+        for (int i = 0; i < size; i++)
+        {
+            printf("%d ", arr[i]);
+        }
     }
 
     return 0;
 }
+
 
 
 // Find maximum and minimum element
