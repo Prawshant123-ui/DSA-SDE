@@ -230,7 +230,6 @@
 //     return 0;
 // }
 
-
 // Updating an element in an array
 
 // #include <stdio.h>
@@ -278,17 +277,83 @@
 //     return 0;
 // }
 
-//Reversing an array
+// Reversing an array
 
+// #include <stdio.h>
+
+// void reverseArray(int arr[], int size) {
+//     int start = 0;
+//     int end = size - 1;
+//     int temp;
+
+//     while (start < end) {
+//         temp = arr[start];
+//         arr[start] = arr[end];
+//         arr[end] = temp;
+
+//         start++;
+//         end--;
+//     }
+// }
+
+// int main() {
+//     int arr[] = {1, 2, 3, 4, 5};
+//     int size = sizeof(arr) / sizeof(arr[0]);
+
+//     reverseArray(arr, size);
+
+//     printf("Reversed array: ");
+
+//     for (int i = 0; i < size; i++) {
+//         printf("%d ", arr[i]);
+//     }
+
+//     return 0;
+// }
+
+// Rotating an array by K places(This is not the optimal solution for rotating an array )
+// #include <stdio.h>
+// int rotateArray(int arr[], int size, int k)
+// {
+//     for (int j = 0; j < k; j++)
+//     {
+//         int temp = arr[0];
+
+//         for (int i = 1; i < size; i++)
+//         {
+//             arr[i - 1] = arr[i];
+//         }
+//         arr[size - 1] = temp;
+//     }
+// }
+
+// int main()
+// {
+//     int arr[] = {1, 2, 3, 4, 5};
+//     int size = 5;
+//     int k = 2;
+
+//     rotateArray(arr, size, k);
+
+//     printf("Rotated array is :");
+//     for (int i = 0; i < size; i++)
+//     {
+//         printf("%d ", arr[i]); // [3,4,5,1,2]
+//     }
+
+//     return 0;
+// }
+
+// Rotating an array (Using the optimal solution)
 
 #include <stdio.h>
 
-void reverseArray(int arr[], int size) {
-    int start = 0;
-    int end = size - 1;
+void reverseArray(int arr[], int start, int end)
+{
     int temp;
 
-    while (start < end) {
+    while (start < end)
+    {
         temp = arr[start];
         arr[start] = arr[end];
         arr[end] = temp;
@@ -298,23 +363,34 @@ void reverseArray(int arr[], int size) {
     }
 }
 
-int main() {
+void rotateArray(int arr[], int k, int size)
+{
+    k = k % size;
+
+    reverseArray(arr, 0, size - 1);
+
+    reverseArray(arr, 0, k - 1);
+
+    reverseArray(arr, k, size - 1);
+}
+
+int main()
+{
     int arr[] = {1, 2, 3, 4, 5};
-    int size = sizeof(arr) / sizeof(arr[0]);
+    int size = 5;
+    int k = 2;
 
-    reverseArray(arr, size);
+    rotateArray(arr, k, size);
 
-    printf("Reversed array: ");
+    printf("Rotated array: ");
 
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < size; i++)
+    {
         printf("%d ", arr[i]);
     }
 
     return 0;
 }
-
-
-
 
 // Find maximum and minimum element
 
