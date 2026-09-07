@@ -33,53 +33,35 @@
 // Second Largest Element
 
 #include <iostream>
-#include <vector>
 using namespace std;
+#include <vector>
 
-int findLargest(vector<int> &arr, int n)
+int secondLargest(vector<int> &arr, int n)
 {
     int largest = arr[0];
-
+    int slargest = -1;
     for (int i = 0; i < n; i++)
     {
         if (arr[i] > largest)
         {
+            slargest = largest;
             largest = arr[i];
         }
-    }
-
-    return largest;
-}
-
-int secondLargest(vector<int> &arr, int n)
-{
-    int largest = findLargest(arr, n);
-    int secondLargest = -1;
-
-    for (int i = 0; i < n; i++)
-    {
-        if (arr[i] > secondLargest && arr[i] != largest)
+        else if (arr[i] < largest && arr[i] > slargest)
         {
-            secondLargest = arr[i];
+            slargest = arr[i];
         }
     }
-
-    return secondLargest;
+    return slargest;
 }
 
 int main()
 {
     vector<int> arr = {1, 2, 3, 4, 5};
     int n = arr.size();
+    int result = secondLargest(arr, n);
 
-    int largestElement = findLargest(arr, n);
-    int secondLargestElement = secondLargest(arr, n);
-
-    cout << "The largest element in the array is: "
-         << largestElement << endl;
-
-    cout << "The second largest element in the array is: "
-         << secondLargestElement << endl;
+    cout << "The 2nd largest element in the array is: " << result;
 
     return 0;
 }
