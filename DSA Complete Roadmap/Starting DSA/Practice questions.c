@@ -97,3 +97,17 @@ int main()
     }
     return 0;
 }
+
+
+//Remove duplicates from a sorted array.
+
+#include <stdio.h>
+
+void removeDuplicate(int arr[],int size){
+    
+}
+
+int main() {
+    
+    return 0;
+}
