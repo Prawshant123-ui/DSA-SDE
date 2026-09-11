@@ -121,3 +121,31 @@ int main()
     
     return 0;
 }
+
+// Left rotate an array by one 
+
+#include <iostream>
+using namespace std;
+#include<vector>
+
+ void rotateArrayByOne(vector<int>& nums,int n) {
+        int temp=nums[0];
+        int n=nums.size();
+        for(int i=0;i<n-1;i++){
+            nums[i]=nums[i+1];
+        }
+        nums[n-1]=temp;
+    }
+
+int main()
+{
+    vector<int> nums={1,2,3,4,5};
+    int n=nums.size();
+     rotateArrayByOne(nums,n);
+
+cout << "The rotated array is :";
+     for(int i=0;i<n;i++){
+        cout << nums[i];
+     }
+    return 0;
+}
